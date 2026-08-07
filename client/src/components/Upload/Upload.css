@@ -3,7 +3,7 @@
   align-items: stretch;
   justify-content: center;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: min(90vw, 540px);
+  width: min(90vw, 800px);
   min-height: 320px;
   padding: 10px;
   border-radius: 12px;
@@ -75,4 +75,48 @@
     border-radius: 8px;
     border: none;
     color: white;
+}
+
+.loading-line {
+    width: 250px;
+    height: 4px;
+    background-color: #4D5562;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.loading-line.dark {
+    background-color: #4D5562;
+}
+
+.loading-line-progress {
+    width: 60px;
+    height: 100%;
+    background-color: #3762e4;
+    border-radius: 4px;
+    animation: loading 1.2s ease-in-out infinite;
+}
+
+.par {
+    color: black;
+}
+
+.par.dark {
+    color: white;
+}
+
+@keyframes loading {
+    0% {
+        transform: translateX(-60px);
+    }
+    100% {
+        transform: translateX(250px);
+    }
+}
+
+@media (max-width: 768px) {
+    .upload-container {
+        width: min(90vw, 400px);
+        min-height: 220px;
+    }
 }

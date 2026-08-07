@@ -8,7 +8,7 @@
     --text-color: black;
     --item-color: #white;
     background-color: white;
-    min-height: 100vh;
+    min-height: 100dvh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -28,6 +28,7 @@
     min-height: 60px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding: 0 50px;
 }
 
@@ -58,4 +59,11 @@
     align-items: center;
     min-height: calc(100vh - 60px);
     padding: 20px;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 0 20px;
+    }
 }
