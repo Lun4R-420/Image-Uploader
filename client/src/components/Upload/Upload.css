@@ -1,0 +1,78 @@
+.upload-container {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: min(90vw, 540px);
+  min-height: 320px;
+  padding: 10px;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: white;
+}
+
+.upload-container.dark {
+  background-color: #212936;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.dropzone {
+  border: 2px dashed hsl(0, 0%, 80%, 0.3);
+  border-radius: 12px;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.dropzone > h3 {
+    font-weight: 500;
+}
+
+.dropzone > p {
+    font-weight: 300;
+    font-size: 0.875rem;
+}
+
+.dropzone.dark > h3 {
+    color: hsl(0, 0%, 100%, 0.7);
+}
+
+.dropzone.dark > p {
+    color: hsl(0, 0%, 100%, 0.7);
+}
+
+.exit-icon {
+    margin-bottom: 1rem;
+}
+
+.uploaded-image {
+    object-fit: cover;
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 12px;
+    display: block;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    background-color: #3762e4;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    border: none;
+    color: white;
+}
