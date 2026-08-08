@@ -8,8 +8,14 @@ import uploadRoutes from "./routes/upload.js";
 const app = express();
 
 app.use(cors({
-    origin: "https://image-uploader-silk-seven.vercel.app"
+    origin: [
+        "http://localhost:5173",
+        "https://image-uploader-silk-seven.vercel.app"
+    ],
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
 }));
+
+app.options("*", cors());
 
 app.use(express.json());
 
