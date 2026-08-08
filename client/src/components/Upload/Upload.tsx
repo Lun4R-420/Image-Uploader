@@ -35,6 +35,10 @@ function Upload({ isDarkMode }: UploadProps) {
             });
 
             const data = await response.json();
+
+            console.log("UPLOAD RESPONSE:", data);
+            console.log("IMAGE URL:", data.url);
+            
             setImage(data);
         } catch (error) {
             console.error("Upload failed:", error);
