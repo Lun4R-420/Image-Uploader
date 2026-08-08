@@ -29,7 +29,7 @@ function Upload({ isDarkMode }: UploadProps) {
             const formData = new FormData();
             formData.append("image", file);
 
-            const response = await fetch("http://localhost:3000/upload", {
+            const response = await fetch("https://image-uploader-backend-fnvz3bbh0-lun4-r.vercel.app/upload", {
                 method: "POST",
                 body: formData,
             });
@@ -55,8 +55,9 @@ function Upload({ isDarkMode }: UploadProps) {
         if (!image) return;
 
         const link = document.createElement("a");
-        link.href = `http://localhost:3000/upload/download/${image.filename}`;
+        link.href = image.url;
         link.download = image.filename;
+        link.target = "_blank";
         link.click();
     };
 
