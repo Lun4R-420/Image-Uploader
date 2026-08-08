@@ -1,3 +1,4 @@
+import "dotenv/config";
 import express from "express";
 import userRoutes from "./routes/users.js";
 import uploadRoutes from "./routes/upload.js";
@@ -22,5 +23,12 @@ app.use((err: any, req: express.Request, res: express.Response, next: express.Ne
         message: err.message
     });
 });
+
+const PORT = 3000;
+
+app.listen(PORT, () => {
+    console.log(`Server running on http://localhost:${PORT}`);
+});
+
 
 export default app;
