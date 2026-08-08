@@ -29,7 +29,7 @@ function Upload({ isDarkMode }: UploadProps) {
             const formData = new FormData();
             formData.append("image", file);
 
-            const response = await fetch("https://image-uploader-backend-fnvz3bbh0-lun4-r.vercel.app/upload", {
+            const response = await fetch("https://image-uploader-backend-aboa0ty7r-lun4-r.vercel.app/upload", {
                 method: "POST",
                 body: formData,
             });
@@ -38,7 +38,7 @@ function Upload({ isDarkMode }: UploadProps) {
 
             console.log("UPLOAD RESPONSE:", data);
             console.log("IMAGE URL:", data.url);
-            
+
             setImage(data);
         } catch (error) {
             console.error("Upload failed:", error);
