@@ -3,7 +3,7 @@ import { useState } from "react";
 import "./Upload.css";
 import Exit from "../../assets/exit.svg";
 import Download from "../../assets/download.svg";
-import Link from "../../assets/link.svg";
+import Link from "../../assets/Link.svg";
 
 interface UploadedImage {
     id: number;
