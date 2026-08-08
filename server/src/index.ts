@@ -16,10 +16,10 @@ app.use(express.json());
 app.use("/users", userRoutes);
 app.use("/upload", uploadRoutes);
 
-const PORT = 3000;
-
-app.listen(PORT, () => {
-    console.log(`Server running on http://localhost:${PORT}`);
-});
+if (process.env.NODE_ENV !== "production") {
+    app.listen(3000, () => {
+        console.log("Server running on http://localhost:3000");
+    });
+}
 
 export default app;
